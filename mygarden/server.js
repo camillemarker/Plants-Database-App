@@ -3,7 +3,9 @@ var express = require('express')
 var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
-var session = require('express-session')
+const session = require('express-session')
+const passport = require('passport')
+
 require('dotenv').config()
 
 var indexRouter = require('./routes/index')
@@ -26,6 +28,8 @@ app.use(
     saveUninitialized: true
   })
 )
+app.use(passport.initialize())
+app.use(passport.session())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
