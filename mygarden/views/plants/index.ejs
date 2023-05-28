@@ -1,4 +1,18 @@
 <%- include('./partials/header') %>
-
+<h2>Plants</h2>
+<table>
+  <tbody>
+    <% plants.forEach(function(p) { %>
+      <tr>
+        <td><%= p.name %></td>
+        <td><%= p.plantType %></td>
+        <td><%= p.datePlanted %></td>
+        <td><%= p.sunshineRec %></td>
+        <td><%= p.waterRec %></td>
+        <td><a href="/plants/<%= p._id %>">Details</a></td>
+      </tr>
+      <% }) %>
+  </tbody>
+</table>
 
 <%- include('./partials/footer') %>

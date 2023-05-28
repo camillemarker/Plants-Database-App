@@ -2,7 +2,14 @@ const Plant = require('../models/plant')
 
 module.exports = {
   new: newPlant,
-  create
+  create,
+  index
+}
+
+async function index(req, res) {
+  res.render('plantss/index', {
+    plantss: await Plant.find()
+  })
 }
 
 function newPlant(req, res) {
