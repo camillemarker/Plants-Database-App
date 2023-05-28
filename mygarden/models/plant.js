@@ -4,10 +4,10 @@ const Schema = mongoose.Schema
 const plantSchema = new Schema(
   {
     name: String,
-    plantType: String,
-    datePlanted: Date,
-    sunshineRec: String,
-    waterRec: String
+    plantType: { type: String, required: true },
+    datePlanted: { type: Date, required: true },
+    sunshineRec: { type: String, required: true },
+    waterRec: { type: String, required: true }
   },
   {
     timestamps: true
