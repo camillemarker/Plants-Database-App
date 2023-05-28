@@ -1,24 +1,25 @@
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
 <h2>Plant Something New</h2>
 <form action=" /plants" method="POST">
   <label> Name:
     <input type="text" name="name">
-  </label><br>
+  </label><br><br>
   <label>Plant Type:
     <input type="text" name="plantType">
-  </label><br>
+  </label><br><br>
   <label>Date Planted:
     <input type="date" name="datePlanted">
-  </label><br>
+  </label><br><br>
   <label> Sunshine Recommendation: 
     <select name="sunshineRec">
       <option value="fullSun">Full Sun</option>
       <option value="partSun">Partial Sun(3-6 hours/day)</option>
       <option value="partShade">Partial Shade(3-6 hours/day)</option>
       <option value="fullShade">Full Shade</option>
-    </select><br>
+    </select><br><br>
     <label>Water Recommendation</label>
       <input type="text" name="waterRec">
-  </label>
+  </label><br><br>
+  <button type="submit">Plant!</button>
 </form>
-<%- include('./partials/footer') %>
+<%- include('../partials/footer') %>
