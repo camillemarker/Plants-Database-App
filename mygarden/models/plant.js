@@ -15,6 +15,9 @@ const observationSchema = new Schema(
 
 const plantSchema = new Schema(
   {
+    imageLink: {
+      type: String
+    },
     name: {
       type: String,
       required: true

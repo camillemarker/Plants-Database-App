@@ -1,6 +1,10 @@
 <%- include('../partials/header') %>
-<h1> Plant Details</h1>
+<h1><%= plant.name %></h1>
 <section id="show-page">
+  <div >
+    <img src="<%= plant.imageLink %>" class="picture"/> 
+  </div>
+  <br>
   <div>Name: <%= plant.name %></div>
   <br>
   <div>Plant Type: <%= plant.plantType %></div>
@@ -12,26 +16,32 @@
   <div>Water Recommendation: <%= plant.waterRec %></div>
 </section>
 <br><br><br>
+
 <h2>Observations</h2>
 <label>New Observation:</label>
+<% if (user) { %>
 <form id="add-observation-form" method="POST"
   action="/plants/<%= plant._id %>/observations">
   <textarea name="content"></textarea>
   <input type="submit" value="Submit">
 </form>
-<% if (movie.reviews.length) { %>
+<% } %> 
+<br><br>
+<% if (plant.observations.length) { %>
   <table>
     <thead>
       <tr>
+        <th>User</th>
         <th>Date</th>
         <th>Observation</th>
       </tr>
     </thead>
     <tbody>
-      <% plant.observations.forEacg(function(p) { %>
+      <% plant.observations.forEach(function(observation) { %>
         <tr>
-          <td><%= p.createdAt.toLocaleDateString() %></td>
-          <td><%= p.content %></td>
+          <td class="observation-user"><img alt="avatar" src="<%= observation.userAvatar %>" referrerpolicy="no-referrer"><%= observation.userName %></td>
+          <td><%= observation.createdAt.toLocaleDateString() %></td>
+          <td><%= observation.content %></td>
         </tr>
       <% }) %>
     </tbody>

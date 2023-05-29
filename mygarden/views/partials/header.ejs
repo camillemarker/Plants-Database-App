@@ -9,5 +9,12 @@
 </head>
 <body>
   <nav>
-    <a href="/">Home</a> | <a href="/plants">My Garden</a> | <a href="/plants/new">Add Plant</a>
+    <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>Home</a> |
+    <% if (user) { %>
+      <a href="/plants" <%- title === 'My Garden' ? 'class="active"' : '' %>>My Garden</a> |
+      <a href="/plants/new" <%- title === 'Add Plant' ? 'class="active"' : '' %>>Add Plant</a> |
+      <a href="/logout">LOG OUT</a> 
+    <% } else { %>
+      <a href="/auth/google" class="login">LOG IN</a>
+    <% } %>
   </nav>
