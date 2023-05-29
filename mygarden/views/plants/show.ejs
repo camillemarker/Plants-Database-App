@@ -13,10 +13,10 @@
 </section>
 <br><br><br>
 <h2>Observations</h2>
+<label>New Observation:</label>
 <form id="add-observation-form" method="POST"
   action="/plants/<%= plant._id %>/observations">
-  <label>observation:</label>
   <textarea name="content"></textarea>
-  <input type="submit" value="Add Observation">
+  <input type="submit" value="Submit">
 </form>
 <%- include('../partials/footer') %>
