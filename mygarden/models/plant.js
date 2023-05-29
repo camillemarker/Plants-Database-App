@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const commentSchema = new Schema({
+const observationSchema = new Schema({
   content: {
     type: String,
     required: true
@@ -26,7 +26,7 @@ const plantSchema = new Schema(
       required: true
     },
     waterRec: { type: String, required: true },
-    comments: [commentSchema]
+    observations: [observationSchema]
   },
   {
     timestamps: true

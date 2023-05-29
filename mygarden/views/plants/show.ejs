@@ -11,5 +11,12 @@
   <br>
   <div>Water Recommendation: <%= plant.waterRec %></div>
 </section>
-
+<br><br><br>
+<h2>Observations</h2>
+<form id="add-observation-form" method="POST"
+  action="/plants/<%= plant._id %>/observations">
+  <label>observation:</label>
+  <textarea name="content"></textarea>
+  <input type="submit" value="Add Observation">
+</form>
 <%- include('../partials/footer') %>
