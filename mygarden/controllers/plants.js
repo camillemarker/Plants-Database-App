@@ -7,7 +7,7 @@ module.exports = {
 }
 
 async function index(req, res) {
-  res.render('plantss/index', {
+  res.render('plants/index', {
     plantss: await Plant.find()
   })
 }

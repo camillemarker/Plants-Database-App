@@ -1,3 +1,11 @@
 <%- include('./partials/header') %>
-<h2> My Garden</h2>
+<h1> Plant Details</h1>
+<section id="show-page">
+  <div>Name: <%= p.name %></div>
+  <div>Plant Type: <%= p.plantType %></div>
+  <div>Date Planted: <%= p.datePlanted %></div>
+  <div>Sunshine Recommendation: <%= p.sunshineRec %></div>
+  <div>Water Recommendation: <%= p.waterRec %></div>
+</section>
+
 <%- include('./partials/footer') %>
