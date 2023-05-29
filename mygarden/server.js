@@ -10,8 +10,9 @@ require('dotenv').config()
 require('./config/database')
 require('./config/passport')
 
-var indexRouter = require('./routes/index')
-var plantsRouter = require('./routes/plants')
+const indexRouter = require('./routes/index')
+const plantsRouter = require('./routes/plants')
+const observationsRouter = require('./routes/observations')
 
 var app = express()
 
@@ -40,6 +41,7 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter)
 app.use('/plants', plantsRouter)
+app.use('/', observationsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
