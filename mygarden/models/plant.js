@@ -1,21 +1,32 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+const commentSchema = new Schema({
+  content: {
+    type: String,
+    required: true
+  }
+})
+
 const plantSchema = new Schema(
   {
-    name: String,
+    name: {
+      type: String,
+      required: true
+    },
     plantType: {
       type: String,
-      enum: ['Flower', 'Fruit', 'Vegetable', 'Shrub', 'Herb', 'Other'],
+      enum: ['flower', 'fruit', 'vegetable', 'shrub', 'herb', 'other'],
       required: true
     },
     datePlanted: { type: Date, required: true },
     sunshineRec: {
       type: String,
-      enum: ['Full Sun', 'Partial Sun', 'Partial Shade', 'Full Shade'],
+      enum: ['fullSun', 'partSun', 'partShade', 'fullShade'],
       required: true
     },
-    waterRec: { type: String, required: true }
+    waterRec: { type: String, required: true },
+    comments: [commentSchema]
   },
   {
     timestamps: true
