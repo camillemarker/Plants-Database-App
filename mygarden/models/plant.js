@@ -35,7 +35,7 @@ const plantSchema = new Schema(
     datePlanted: { type: Date, required: true },
     sunshineRec: {
       type: String,
-      enum: ['fullSun', 'partSun', 'partShade', 'fullShade'],
+      enum: ['full sun', 'partial sun', 'partial shade', 'full shade'],
       required: true
     },
     waterRec: { type: String, required: true },

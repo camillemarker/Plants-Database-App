@@ -33,7 +33,5 @@ async function show(req, res) {
       path: 'user'
     }
   })
-  // let observations = plant.observations.populate
-  console.log(plant.observations[0].user)
   res.render('plants/show', { title: 'Plant Details', plant })
 }
