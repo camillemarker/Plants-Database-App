@@ -1,10 +1,39 @@
-body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+* {
+  font-family: 'Playfair Display SC', serif;
+  color: #1b5d10;
+  background-color: #d4e8b2;
+}
+#home-text {
+  font-size: 35px;
+  text-align: center;
+}
+
+#home-text > h2 {
+  font-size: 20px;
+  text-align: center;
 }
 
 a {
-  color: #00b7ff;
+  font-size: 20px;
+}
+
+#mygarden-page > h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+#mygarden-page > h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+#plant-list {
+  font-size: 30px;
+}
+
+body {
+  padding: 50px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 #new-form {
@@ -53,8 +82,4 @@ a {
   border: 8px solid #ffffff;
   max-width: 300px;
   height: auto;
-}
-
-* {
-  background-color: #b4cb8e;
 }

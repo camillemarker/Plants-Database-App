@@ -1,12 +1,8 @@
 <%- include('../partials/header') %>
+<section id="mygarden-page">
 <h1>My Garden</h1>
 <h2>Plants</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
+<table id="plant-list">
   <tbody>
     <% plants.forEach(function(p) { %>
       <tr>
@@ -16,5 +12,5 @@
       <% }) %>
   </tbody>
 </table>
-
+</section>
 <%- include('../partials/footer') %>
