@@ -20,19 +20,19 @@
 <h2>Observations</h2>
 <label>New Observation:</label>
 <% if (user) { %>
-<form id="add-observation-form" method="POST"
-  action="/plants/<%= plant._id %>/observations">
-  <textarea name="content"></textarea>
-  <input type="submit" value="Submit">
-</form>
+  <form id="add-observation-form" method="POST"
+    action="/plants/<%= plant._id %>/observations">
+    <textarea name="content"></textarea>
+    <input type="submit" value="Submit">
+  </form>
 <% } %> 
 <br><br>
 <% if (plant.observations.length) { %>
   <table>
     <thead>
       <tr>
-        <th>User</th>
-        <th>Date</th>
+        <th>User</th><br>
+        <th>Date</th><br>
         <th>Observation</th>
       </tr>
     </thead>

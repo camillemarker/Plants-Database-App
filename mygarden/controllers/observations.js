@@ -6,10 +6,11 @@ module.exports = {
 
 async function create(req, res) {
   const plant = await Plant.findById(req.params.id)
-  req.body.user = req.user._id
-  req.body.userName = req.user.name
-  req.body.userAvatar = req.user.avatar
-  plant.observations.push(req.body)
+  let observation = {
+    content: req.body.content,
+    user: req.user._id
+  }
+  plant.observations.push(observation)
   try {
     await plant.save()
     res.redirect(`/plants/${plant._id}`)

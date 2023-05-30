@@ -10,12 +10,10 @@ module.exports = {
 async function index(req, res) {
   const plants = await Plant.find({})
   res.render('plants/index', { title: 'Plants', plants })
-  console.log('RUNNING INDEX')
 }
 
 function newPlant(req, res) {
   res.render('plants/new', { title: 'Add Plant', errorMsg: '' })
-  console.log('RUNNING NEW PLANT')
 }
 
 async function create(req, res) {
@@ -26,11 +24,16 @@ async function create(req, res) {
     console.log(err)
     res.render('plants/new', { errorMsg: err.message })
   }
-  console.log('RUNNING CREATE')
 }
 
 async function show(req, res) {
-  const plant = await Plant.findById(req.params.id)
+  const plant = await Plant.findById(req.params.id).populate({
+    path: 'observations',
+    populate: {
+      path: 'user'
+    }
+  })
+  // let observations = plant.observations.populate
+  console.log(plant.observations[0].user)
   res.render('plants/show', { title: 'Plant Details', plant })
-  console.log('RUNNING NEW PLANT')
 }
