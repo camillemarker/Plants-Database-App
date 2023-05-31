@@ -29,7 +29,7 @@ const plantSchema = new Schema(
     },
     plantType: {
       type: String,
-      enum: ['flower', 'fruit', 'vegetable', 'shrub', 'herb', 'other'],
+      enum: ['flower', 'fruit', 'vegetable', 'shrub', 'herb', 'ther'],
       required: true
     },
     datePlanted: { type: Date, required: true },

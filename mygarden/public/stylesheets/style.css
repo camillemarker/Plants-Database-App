@@ -27,6 +27,17 @@ a {
   text-align: center;
 }
 
+#show-page > h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+#show-page > div {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 #plant-list {
   font-size: 30px;
 }
@@ -82,4 +93,20 @@ body {
   border: 8px solid #ffffff;
   max-width: 300px;
   height: auto;
+}
+
+.observation-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.observation-user img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.new-form {
+  background: white;
 }

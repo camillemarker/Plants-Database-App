@@ -4,7 +4,8 @@ module.exports = {
   index,
   show,
   new: newPlant,
-  create
+  create,
+  delete: deletePlant
 }
 
 async function index(req, res) {
@@ -34,4 +35,18 @@ async function show(req, res) {
     }
   })
   res.render('plants/show', { title: 'Plant Details', plant })
+}
+
+function deletePlant(req, res, next) {
+  Plant.findOne({ 'plant._id': req.params.id }).then(function (plant) {
+    if (!plant) return res.redirect('/plants')
+    plant._id
+      .remove(req.params.id)
+      .then(function () {
+        res.redirect('/plants')
+      })
+      .catch(function (err) {
+        return next(err)
+      })
+  })
 }

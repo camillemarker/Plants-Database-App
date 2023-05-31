@@ -11,6 +11,6 @@ router.get('/:id', plantsCtrl.show)
 
 router.post('/', ensureLoggedIn, plantsCtrl.create)
 
-router.delete('/:id', plantsCtrl.delete)
+router.delete('/:id', ensureLoggedIn, plantsCtrl.delete)
 
 module.exports = router
