@@ -4,10 +4,10 @@ const plantsCtrl = require('../controllers/plants')
 
 router.get('/', plantsCtrl.index)
 
-router.get('/new', plantsCtrl.new)
+router.get('/new', ensureLoggedIn, plantsCtrl.new)
 
 router.get('/:id', plantsCtrl.show)
 
-router.post('/', plantsCtrl.create)
+router.post('/', ensureLoggedIn, plantsCtrl.create)
 
 module.exports = router
