@@ -15,6 +15,7 @@ async function create(req, res) {
   try {
     await plant.save()
     res.redirect(`/plants/${plant._id}`)
+    console.log('THIS IS MY OBSERVATION', observation.user)
   } catch (err) {
     console.log(err)
     res.redirect(`/plants/${plant._id}`)

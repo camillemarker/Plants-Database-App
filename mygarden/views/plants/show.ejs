@@ -39,18 +39,18 @@
     <tbody>
       <% plant.observations.forEach(function(observation) { %>
         <tr>
-          <td class="observation-user"><img alt="avatar" src="<%= observation.userAvatar %>" referrerpolicy="no-referrer"><%= observation.userName %></td>
+          <td class="observation-user"><img alt="avatar" src="<%= observation.user.avatar %>" referrerpolicy="no-referrer"><%= observation.userName %></td>
           <td><%= observation.createdAt.toLocaleDateString() %></td>
           <td><%= observation.content %></td>
+          <td>
+            <% if (user._id.equals(observation.user._id)) { %>
+              <form action="/observations/<%= observation._id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+              </form>
+            <% } %>
+          </td>
         </tr>
       <% }) %>
-      <td>
-        <% if (user?._id.equals(observation.user)) { %>
-          <form action="/observations/<%= observation._id %>?_method=DELETE" method="POST">
-            <button type="submit">X</button>
-          </form>
-        <% } %>
-      </td>
     </tbody>
   </table>
   <% } else { %>
