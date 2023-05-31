@@ -8,6 +8,9 @@
       <tr>
         <td><%= p.name %></td>
         <td><a href="/plants/<%= p._id %>">Details</a></td>
+        <td><form action="/plants/<%= p._id %>?_method=DELETE" method="POST">
+          <button type="submit">X</button>
+        </form></td>
       </tr>
       <% }) %>
   </tbody>
