@@ -1,14 +1,17 @@
 <%- include('../partials/header') %>
+<link rel='stylesheet' href='/stylesheets/new-plant.css' />
+
 <h2>Plant Something New</h2>
-<form action="/plants" method="POST"></form>
+
+<form action="/plants" method="POST" id="new-form"></form>
   <label>Image Address:
-    <input type="text" name="imageLink">
+    <input type="text" name="imageLink" class="input">
   </label><br><br>
   <label> Name:
-    <input type="text" name="name">
+    <input type="text" name="name" class="input">
   </label><br><br>
   <label>Plant Type:
-    <select name="plantType">
+    <select name="plantType" class="input">
       <option value="flower">Flower</option>
       <option value="fruit">Fruit</option>
       <option value="vegetable">Vegetable</option>
@@ -18,18 +21,19 @@
     </select>
   </label><br><br>
   <label>Date Planted:
-    <input type="date" name="datePlanted">
+    <input type="date" name="datePlanted" class="input">
   </label><br><br>
   <label> Sunshine Recommendation: 
-    <select name="sunshineRec">
+    <select name="sunshineRec" class="input">
       <option value="full sun">Full Sun</option>
       <option value="partial sun">Partial Sun(3-6 hours/day)</option>
       <option value="partial shade">Partial Shade(3-6 hours/day)</option>
       <option value="full shade">Full Shade</option>
     </select><br><br>
     <label>Water Recommendation</label>
-      <input type="text" name="waterRec">
+      <input type="text" name="waterRec" class="input">
   </label><br><br>
   <button type="submit">Plant!</button>
 </form>
+
 <%- include('../partials/footer') %>

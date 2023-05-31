@@ -1,0 +1,74 @@
+* {
+  font-family: 'Playfair Display SC', serif;
+  color: #1b5d10;
+  background-color: #d4e8b2;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+div {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+a {
+  font-size: 20px;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+#add-observation-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+
+#add-observation-form input[type='submit'] {
+  width: 8rem;
+  grid-column: 2 / 3;
+  margin-bottom: 2rem;
+}
+
+button {
+  width: 50px;
+  height: 60px;
+  background-color: none;
+  border: none;
+  color: palevioletred;
+}
+
+.picture {
+  border: 8px solid #ffffff;
+  max-width: 300px;
+  height: auto;
+}
+
+.observation-user {
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.observation-user img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+#content {
+  background-color: white;
+  display: flex;
+}
+
+#submitob {
+  background-color: white;
+}
+
+#submitob:hover {
+  background-color: #1b5d10;
+  color: white;
+}

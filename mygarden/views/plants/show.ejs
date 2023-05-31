@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
-<section id="show-page">
+<link rel='stylesheet' href='/stylesheets/details.css' />
+<section>
   <h1> ~<%= plant.name %>~</h1>
   <div >
     <img src="<%= plant.imageLink %>" class="picture"/> 
@@ -22,8 +23,9 @@
 <% if (user) { %>
   <form id="add-observation-form" method="POST"
     action="/plants/<%= plant._id %>/observations">
-    <textarea name="content"></textarea>
-    <input type="submit" value="Submit">
+    <textarea id="content"></textarea>
+    <br>
+    <input type="submit" value="Submit" id="submitob">
   </form>
 <% } %> 
 <br><br>

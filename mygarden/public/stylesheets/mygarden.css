@@ -1,0 +1,28 @@
+* {
+  font-family: 'Playfair Display SC', serif;
+  color: #1b5d10;
+  background-color: #d4e8b2;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 45px;
+  text-align: center;
+}
+
+a {
+  font-size: 20px;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+#plant-list {
+  font-size: 30px;
+  text-align: center;
+}

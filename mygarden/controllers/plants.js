@@ -38,15 +38,17 @@ async function show(req, res) {
 }
 
 function deletePlant(req, res, next) {
-  Plant.findOne({ 'plant._id': req.params.id }).then(function (plant) {
-    if (!plant) return res.redirect('/plants')
-    plant._id
-      .remove(req.params.id)
-      .then(function () {
-        res.redirect('/plants')
-      })
-      .catch(function (err) {
-        return next(err)
-      })
-  })
+  Plant.findById(req.params.id)
+    .then(function (plant) {
+      if (!plant) {
+        return res.redirect('/plants')
+      }
+      return Plant.findByIdAndRemove(req.params.id)
+    })
+    .then(function () {
+      res.redirect('/plants')
+    })
+    .catch(function (err) {
+      return next(err)
+    })
 }

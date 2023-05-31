@@ -1,0 +1,25 @@
+* {
+  background-image: url('background.png');
+  background-size: cover;
+  font-family: 'Playfair Display SC', serif;
+  color: #1b5d10;
+  background-color: #d4e8b2;
+}
+
+a {
+  font-size: 20px;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+#home-text {
+  font-size: 35px;
+  text-align: center;
+}
+
+#home-text > h2 {
+  font-size: 20px;
+  text-align: center;
+}
