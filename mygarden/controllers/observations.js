@@ -1,7 +1,8 @@
 const Plant = require('../models/plant')
 
 module.exports = {
-  create
+  create,
+  delete: deleteObservation
 }
 
 async function create(req, res) {
@@ -18,4 +19,22 @@ async function create(req, res) {
     console.log(err)
     res.redirect(`/plants/${plant._id}`)
   }
+}
+
+function deleteObservation(req, res, next) {
+  Plant.findOne({
+    'observations._id': req.params.id,
+    'observations.user': req.user._id
+  }).then(function (plant) {
+    if (!plant) return res.redirect('/plants')
+    plant.observations.remove(req.params.id)
+    plant
+      .save()
+      .then(function () {
+        res.redirect(`/plants/${plant._id}`)
+      })
+      .catch(function (err) {
+        return next(err)
+      })
+  })
 }
