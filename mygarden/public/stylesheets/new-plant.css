@@ -9,12 +9,13 @@ a {
 }
 
 a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(254, 151, 197);
 }
 
 h2 {
   font-size: 40px;
   text-align: center;
+  padding: 0 auto;
 }
 
 label {
@@ -30,11 +31,32 @@ button {
   display: inline;
   padding: 0px;
   color: #1b5d10;
-  border: 3px solid #1b5d10;
+  border: 3px solid #d4e8b2;
   font-size: 25px;
 }
 
 button:hover {
-  background-color: #1b5d10;
-  color: rgb(255, 255, 255);
+  color: rgb(254, 151, 197);
+  background-color: #d4e8b2;
+}
+
+#gardentool {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: 350px;
+}
+
+.trowel {
+  display: block;
+  margin: auto;
+  height: 65px;
+  width: 65px;
+}
+
+#form-new {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-content: center;
 }

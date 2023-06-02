@@ -19,10 +19,75 @@ a {
 }
 
 a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(254, 151, 197);
 }
 
 #plant-list {
   font-size: 30px;
-  text-align: center;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+table td {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+tbody {
+  padding: 2px;
+  background-color: #1b5d10;
+}
+
+#details {
+  display: flex;
+}
+
+#delete {
+  font-size: 10px;
+  display: flex;
+}
+
+button:hover {
+  background-color: rgb(254, 151, 197);
+  border-color: rgb(254, 151, 197);
+}
+
+#name {
+  padding-right: 50px;
+}
+
+.img1 {
+  height: 80px;
+  width: 80px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.img2 {
+  height: 80px;
+  width: 80px;
+}
+
+#side-left,
+#side-right {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: pink;
+  padding: 20px;
+}
+
+#body {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  margin: 0;
+  gap: 0px;
+  background-color: blue;
+  padding: 20px;
+}
+
+.watercan {
+  height: 1px;
+  width: 1px;
 }

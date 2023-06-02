@@ -32,7 +32,10 @@ const plantSchema = new Schema(
       enum: ['flower', 'fruit', 'vegetable', 'shrub', 'herb', 'ther'],
       required: true
     },
-    datePlanted: { type: Date, required: true },
+    datePlanted: {
+      type: Date,
+      required: true
+    },
     sunshineRec: {
       type: String,
       enum: ['full sun', 'partial sun', 'partial shade', 'full shade'],

@@ -1,9 +1,10 @@
 <%- include('../partials/header') %>
-<link rel='stylesheet' href='/stylesheets/new-plant.css' />
+<link rel='stylesheet' href='/stylesheets/new-plant.css'/>
 
+<img src="/images/gardentool.png" alt="gardentool" id="gardentool">
 <h2>Plant Something New</h2>
 
-<form action="/plants" method="POST" id="new-form"></form>
+<form action="/plants" method="POST" id="form-new">
   <label>Image Address:
     <input type="text" name="imageLink" class="input">
   </label><br><br>
@@ -33,7 +34,8 @@
     <label>Water Recommendation</label>
       <input type="text" name="waterRec" class="input">
   </label><br><br>
-  <button type="submit">Plant!</button>
+  <section>
+    <button type="submit"><img src="/images/trowel.png" alt="trowel" class="trowel">Plant!</button>
+  </section>
 </form>
-
 <%- include('../partials/footer') %>

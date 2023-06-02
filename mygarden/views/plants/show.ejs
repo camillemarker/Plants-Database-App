@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 <link rel='stylesheet' href='/stylesheets/details.css' />
+<section id="main">
 <section>
   <h1> ~<%= plant.name %>~</h1>
   <div >
@@ -18,23 +19,31 @@
 </section>
 <br><br><br>
 
+<div class="container">
 <h2>Observations</h2>
 <label>New Observation:</label>
 <% if (user) { %>
-  <form id="add-observation-form" method="POST"
+  <form id="add-observation-form" method="POST" id="obsform"
     action="/plants/<%= plant._id %>/observations">
-    <textarea id="content"></textarea>
+    <textarea name="content"></textarea>
     <br>
     <input type="submit" value="Submit" id="submitob">
   </form>
 <% } %> 
 <br><br>
 <% if (plant.observations.length) { %>
-  <table>
+  <div class="table-container">
+  <table id="observation-table">
+    <colgroup>
+      <col style="width: 30%;" />
+      <col style="width: 20%;" />
+      <col style="width: 45%;" />
+      <col style="width: 5%;" />
+    </colgroup>
     <thead>
       <tr>
-        <th>User</th><br>
-        <th>Date</th><br>
+        <th>User</th>
+        <th>Date</th>
         <th>Observation</th>
       </tr>
     </thead>
@@ -43,8 +52,8 @@
         <tr>
           <td class="observation-user"><img alt="avatar" src="<%= observation.user.avatar %>" referrerpolicy="no-referrer"><%= observation.user.name %></td>
           <td><%= observation.createdAt.toLocaleDateString() %></td>
-          <td><%= observation.content %></td>
-          <td>
+          <td class="observation-content"><%= observation.content %></td>
+          <td class="observation-delete">
             <% if (user._id.equals(observation.user._id)) { %>
               <form action="/observations/<%= observation._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
@@ -55,8 +64,10 @@
       <% }) %>
     </tbody>
   </table>
+</div>
   <% } else { %>
     <h5>No Observations Yet</h5>
   <% } %>
-
+  </div>
+</section>
 <%- include('../partials/footer') %>

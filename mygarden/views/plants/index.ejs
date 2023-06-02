@@ -1,20 +1,27 @@
 <%- include('../partials/header') %>
-<link rel='stylesheet' href='/stylesheets/mygarden.css' />
+<link rel='stylesheet' href='/stylesheets/mygarden.css'/>
+
 <section id="mygarden-page">
-<h1>My Garden</h1>
+  <h1><img src="/images/butterfly.png" alt="butterfly" class="img1">My Garden<img src="/images/butterfly.png" alt="butterfly" class="img2"></h1>
 <h2>~Plants~</h2>
+
+<div id="list">
 <table id="plant-list">
   <tbody>
     <% plants.forEach(function(p) { %>
       <tr>
-        <td><%= p.name %></td>
-        <td><a href="/plants/<%= p._id %>">Details</a></td>
-        <td><form action="/plants/<%= p._id %>?_method=DELETE" method="POST">
+        <td id="name"><%= p.name %></td>
+        <td id="details"><a href="/plants/<%= p._id %>" id="detailscript">Details</a></td>
+        <td>
+          <form action="/plants/<%= p._id %>?_method=DELETE" method="POST" id="delete">
           <button type="submit">X</button>
-        </form></td>
+          </form>
+        </td>
       </tr>
       <% }) %>
   </tbody>
 </table>
+</div>
+
 </section>
 <%- include('../partials/footer') %>
