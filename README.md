@@ -44,6 +44,7 @@ Tasks: This application must ...
 
 #### **_Future Udates_**
 
+- [ ] CSS Corrections
 - [ ] Mobile Functionality
 - [ ] Water Log/Email Alerts
 - [ ] Update Photos
@@ -66,5 +67,7 @@ Tasks: This application must ...
 - [Trowel](https://www.pngegg.com/en/png-isvjm/download)
 - [Cherry Blossom](https://www.nicepng.com/ourpic/u2q8a9a9u2q8o0r5_67185691-flower-clipart-cute-sprig-of-spring-flowers/)
 - [Wheelbarrow](https://www.canva.com/)
+
+Plant Details Image : -[Tomatoes](https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/tomatoes_helios4eos_gettyimages-edit.jpeg?itok=2owPswip) -[Hibiscus](https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/tomatoes_helios4eos_gettyimages-edit.jpeg?itok=2owPswip) -[Basil](https://upload.wikimedia.org/wikipedia/commons/9/90/Basil-Basilico-Ocimum_basilicum-albahaca.jpg) -[Dahlias](https://images.ctfassets.net/zma7thmmcinb/5t3XK5aD2RPFtBufctbBE3/8bd3a257d37147cb61d81075aac99dd5/how-to-grow-dahlias-pv-Nicholas.jpg?w=328&fm=webp) -[Lavender](http://localhost:3000/plants/64797bfa3f1ada75caf6b26e) -[Roses](https://www.saferbrand.com/media/Articles/Safer-Brand/How-to-Get-Rid-of-Black-Spot-on-Roses.jpg)
 
 ##### Additional Sources:

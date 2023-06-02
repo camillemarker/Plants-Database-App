@@ -88,3 +88,11 @@ button:hover {
   object-fit: contain;
   padding: 150px;
 }
+
+@media (min-width: 1500px) {
+  #bunny {
+    padding: 240px;
+  }
+}
+
+
