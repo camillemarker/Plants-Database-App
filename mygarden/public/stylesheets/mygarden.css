@@ -16,6 +16,7 @@ h2 {
 
 a {
   font-size: 20px;
+  background-color: #d4e8b2;
 }
 
 a:hover {
@@ -25,8 +26,11 @@ a:hover {
 #plant-list {
   font-size: 30px;
   display: flex;
-  padding: 10px;
   justify-content: center;
+  background-image: url('/images/backgroundbunny.png');
+  background-size: contain;
+  padding-bottom: 300px;
+  background-repeat: no-repeat;
 }
 
 table td {
@@ -83,11 +87,5 @@ button:hover {
   grid-template-columns: 20% 60% 20%;
   margin: 0;
   gap: 0px;
-  background-color: blue;
   padding: 20px;
-}
-
-.watercan {
-  height: 1px;
-  width: 1px;
 }

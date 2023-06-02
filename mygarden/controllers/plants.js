@@ -21,6 +21,7 @@ async function create(req, res) {
   try {
     await Plant.create(req.body)
     res.redirect(`/plants`)
+    console.log('THIS IS MY CONSOLE LOG', req.body.datePlanted)
   } catch (err) {
     console.log(err)
     res.render('plants/new', { errorMsg: err.message })
