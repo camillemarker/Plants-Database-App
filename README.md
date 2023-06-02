@@ -24,7 +24,7 @@
 'My Garden' is a plant-tracking app that allows the user to log key information about the greenery in their gardens. Users who have created an account can add plants to their personal 'My Garden' page, where they can then view specific information about the plant such as type (flower, veggie, fruit, herb, shrub), date planted, and sunshine/water requirements. Users will be able to leave dated observations about the progress of each individual plant in their garden regarding their progress and observations about its growth. Only the logged in user can view their personal garden page, make observations, and delete observations from their plants and plants from their garden. My backgrounds were made using Canva and other web images were implemented throughout (see sources below). I made this Express we application for the second unit of my General Assembly sotware engineering course to exemplify my understanding of Express applications and CRD functionality involving a MongoDB database.
 
 ![Home Page](https://i.imgur.com/J9H9n2w.png)
-![My Garden](https://imgur.com/a/JbH7IQL)
+![My Garden](https://i.imgur.com/5wXFTN6_d.jpg?maxwidth=520&shape=thumb&fidelity=high)
 
 --
 
