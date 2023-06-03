@@ -20,6 +20,11 @@ const observationSchema = new Schema(
 
 const plantSchema = new Schema(
   {
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
     imageLink: {
       type: String
     },

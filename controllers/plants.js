@@ -9,7 +9,11 @@ module.exports = {
 }
 
 async function index(req, res) {
-  const plants = await Plant.find({})
+  if (!req.user) {
+    return res.redirect('/')
+  }
+  const userId = req.user._id
+  const plants = await Plant.find({ user: userId })
   res.render('plants/index', { title: 'Plants', plants })
 }
 
@@ -19,9 +23,17 @@ function newPlant(req, res) {
 
 async function create(req, res) {
   try {
-    await Plant.create(req.body)
+    const newPlant = new Plant({
+      imageLink: req.body.imageLink,
+      name: req.body.name,
+      plantType: req.body.plantType,
+      datePlanted: req.body.datePlanted,
+      sunshineRec: req.body.sunshineRec,
+      waterRec: req.body.waterRec,
+      user: req.user._id
+    })
+    await newPlant.save()
     res.redirect(`/plants`)
-    console.log('THIS IS MY CONSOLE LOG', req.body.datePlanted)
   } catch (err) {
     console.log(err)
     res.render('plants/new', { errorMsg: err.message })
